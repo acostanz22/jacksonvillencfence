@@ -35,6 +35,42 @@ LOCATIONS = [
     ("fence-company-onslow-county-nc.html", "Onslow County"),
 ]
 
+# Header introductions: every page opens with the business name and runs 5-6 sentences.
+INTROS = {
+    "index.html": "Jacksonville NC Fence Company installs and repairs wood, vinyl, chain-link, aluminum, and farm fencing for homes, farms, and commercial lots. Our work covers Jacksonville and nearby Onslow County towns such as Swansboro, Richlands, and Holly Ridge. Every estimate starts with a look at the property, because sandy coastal soil, slopes, and gate openings change how a fence is built. You get a straight answer on whether a job is a repair or a rebuild, and on which material suits the way you will use the fence. Estimates are free, and there is no public storefront to visit. Use the quote form here or call (910) 519-2447 to request your free fence quote.",
+    "services.html": "Jacksonville NC Fence Company builds six kinds of fence for properties in Jacksonville and Onslow County. Wood and vinyl handle privacy and picket work, while aluminum suits front yards, pools, and sloped lines. Chain link covers yards, dog runs, and work lots, and commercial fencing adds heavier framing and vehicle gates. Farm fencing handles rail, wire, pipe-and-cable, and electric lines for animals on acreage. Each service page explains the process, what changes the estimate, and the questions owners ask most. Call (910) 519-2447 or send the quote form to talk through your job.",
+    "wood-fence.html": "Jacksonville NC Fence Company installs wood privacy, picket, and shadowbox fences for yards in Jacksonville and Onslow County. Wood is the right fit when you want a solid backyard screen or a fence you can stain to match the house. We measure the line, set posts in concrete for sandy coastal soil, and price each gate as its own piece. Inside the City of Jacksonville, side and rear residential fences are limited to 6 feet and front-yard fences to 4 feet. If the posts on an older wood line are still sound, we can repair the failed section instead of rebuilding it. Send the quote form or call (910) 519-2447 for a free estimate.",
+    "vinyl-fence.html": "Jacksonville NC Fence Company installs vinyl privacy, picket, and ranch-rail fences for homeowners in Jacksonville and Onslow County. Vinyl suits a yard where you want a straight, clean line without a yearly stain schedule. We match the style, color, and height to your lot and to any written HOA rule before panels are ordered. Sloped yards are laid out with racked or stepped panels, and every vinyl line gets its own posts set in concrete. Gates are hung so the latch meets the strike and the leaf does not drag. Use the quote form or call (910) 519-2447 to request a free estimate.",
+    "chain-link-fence.html": "Jacksonville NC Fence Company installs chain-link fences for residential yards, dog runs, and commercial perimeters in Jacksonville and Onslow County. Galvanized fabric is the basic choice, and vinyl-coated fabric is the better spec near salt air. Terminal posts, line posts, and rail are set first so the fabric can be stretched tight and tied off. Gates hang on posts sized for the opening, whether that is a walk gate for a dog yard or a double drive gate. A privacy screen can be added when the frame is built to carry the wind load. Call (910) 519-2447 or send the quote form for a free estimate.",
+    "aluminum-fence.html": "Jacksonville NC Fence Company installs ornamental aluminum fences and gates for front yards, pools, and sloped lines in Jacksonville and Onslow County. Aluminum stays open, so it marks your property while keeping the yard visible. It does not rust like steel and does not need paint, which suits humid coastal summers and pool chemicals. We choose the height around front-yard limits and pool-barrier rules, then match the finish to the house or the HOA sheet. Panels rack to follow a mild slope, and steeper drops can be stepped. Send the quote form or call (910) 519-2447 for a free estimate.",
+    "farm-fence.html": "Jacksonville NC Fence Company installs farm and acreage fencing around Jacksonville, Richlands, Hubert, and rural Onslow County. Rail, woven wire, pipe-and-cable, and electric fence are all options, and the animal decides which one fits. Horses need a fence they can see, while cattle can be held with woven wire or electric. We plan corners, bracing, and truck-width gates before any wire goes up. A wood or vinyl yard around the house and a farm fence on the back acreage can be quoted as two separate jobs. Call (910) 519-2447 or use the quote form to request a free estimate.",
+    "commercial-fencing.html": "Jacksonville NC Fence Company installs commercial chain-link fencing, vehicle gates, and screens for lots and job sites in Jacksonville and Onslow County. A storage yard, church lot, or contractor site gets a heavier commercial spec instead of a backyard panel kit. Gate openings are measured for the vehicles that use them, and terminal posts are sized for the height and any screen. Inside the City of Jacksonville, published standards allow nonresidential fences up to 8 feet. If a property manager or contractor has a written spec, send it with your request. Call (910) 519-2447 or use the quote form to start a free estimate.",
+    "faq.html": "Jacksonville NC Fence Company answers the fence questions Onslow County owners ask most often. You will find notes on cost, permits, sandy soil, HOA rules, and storm repairs. Answers are based on how we price and build fences on local lots, not on a national average. City of Jacksonville rules and unincorporated Onslow County rules are different, and we point out which one applies. If your lot does not match any answer here, describe it to us. Call (910) 519-2447 or send the quote form for a free estimate.",
+    "about.html": "Jacksonville NC Fence Company is a local fence crew serving houses, farms, and commercial lots in Jacksonville and nearby Onslow County. We install and repair wood, vinyl, chain-link, aluminum, and farm fences, along with gates. Each estimate comes from a look at the line rather than from a national form. We work as a service-area business with no public storefront, so you call and we come to the property. We do not install on Camp Lejeune or New River, but we fence off-base houses when the owner has approved the work. Call (910) 519-2447 or send the quote form to start a free estimate.",
+    "contact.html": "Jacksonville NC Fence Company offers free fence estimates for properties in Jacksonville and Onslow County. Tell us the town, the fence type if you know it, and about how much line you need. Mention whether an old fence has to come out and whether the gate must fit a mower or a truck. If an HOA has a written fence rule, include it so we order the right height and color. We are a service-area company with no public storefront, so we come to you. Fill out the quote form or call (910) 519-2447 and we will take it from there.",
+    "service-areas.html": "Jacksonville NC Fence Company installs and repairs fences within about 25 miles of Jacksonville. That includes Swansboro, Richlands, Holly Ridge, Sneads Ferry, Hubert, Piney Green, Midway Park, and the rest of Onslow County. Each town puts different demands on a fence, from salt air near the water to longer farm lines inland. Choose your town below for notes on materials, soil, and local rules that affect your lot. If your address is near the edge of this area, call and ask. Send the quote form or call (910) 519-2447 for a free estimate.",
+    "privacy.html": "Jacksonville NC Fence Company collects only the details you send when you ask for a fence estimate. The quote form on this site is provided by Tally, and we receive your name, phone number, email, and job notes. We use that information to reply, to plan a look at your property, and to prepare your estimate. We do not sell the contents of the form. Phone calls to (910) 519-2447 are answered for the same purpose. To have your request deleted, call and tell us, and please do not send payment information through the form.",
+    "fence-company-swansboro-nc.html": "Jacksonville NC Fence Company installs fences for Swansboro homes and lots near Bogue Sound. Salt air is harder on bare steel here than it is inland, so we lean toward vinyl, aluminum, and vinyl-coated chain link. Swansboro lots are often smaller, which means gate widths and post layouts have to be exact. Wood works too when it will be stained and the posts are set in concrete. We confirm the town's height and setback rules for your street before ordering material. Call (910) 519-2447 or send the quote form for a free Swansboro fence estimate.",
+    "fence-company-richlands-nc.html": "Jacksonville NC Fence Company builds fences for Richlands homes, pastures, and acreage northwest of Jacksonville. Jobs here are often long lines, such as field wire or rail on the back acreage and a privacy fence around the house. Salt is less of a concern inland, so galvanized chain link and wood are common and sensible. The soil is still coastal-plain sand in many fields, so posts go in concrete. Corners, bracing, and truck-width gates drive the price more than picket style does. Call (910) 519-2447 or use the quote form for a free Richlands estimate.",
+    "fence-company-holly-ridge-nc.html": "Jacksonville NC Fence Company installs fences for Holly Ridge subdivisions and house lots between Jacksonville and the beaches. Many jobs start with an HOA rule on height, color, and which side of the fence faces the neighbor. We ask for the written standard before ordering white vinyl, stained wood, or a black aluminum front fence. Newer lots can hide irrigation lines along the fence path, so we ask you to flag them before digging. Wood, vinyl, and aluminum cover most residential work here, with chain link for dog runs and side yards. Request a free Holly Ridge estimate by calling (910) 519-2447 or using the quote form.",
+    "fence-company-sneads-ferry-nc.html": "Jacksonville NC Fence Company installs fences for Sneads Ferry homes near the New River Inlet. Salt off the inlet and low ground that stays soft after rain decide the material and the post plan here. Vinyl-coated chain link, vinyl privacy, and aluminum avoid the rust problems bare steel shows sooner on this side of the county. We do not set posts in standing water, so low corners of the lot are checked before concrete goes in. Gates are hung and latched to keep working even when a house sits empty part of the year. Call (910) 519-2447 or use the quote form for a free Sneads Ferry estimate.",
+    "fence-company-hubert-nc.html": "Jacksonville NC Fence Company builds fences for Hubert properties between Jacksonville and Swansboro. Lots here are often larger than a subdivision yard, so the usual job is a privacy or dog fence near the house and a longer wire or rail line on the rest of the parcel. We quote the yard and the field as separate runs, so you can build one now and the other later. Hubert is unincorporated Onslow County, where a zoning permit is not required for a fence, though easements and the right-of-way stay clear. Horses need a fence they can see, and dogs need a latch and mesh that suit their size. Call (910) 519-2447 or send the quote form for a free Hubert estimate.",
+    "fence-company-piney-green-nc.html": "Jacksonville NC Fence Company installs residential fences in Piney Green, where lots are close together and lines are short. A 6-foot wood or vinyl privacy fence on the side and rear is the most common request. We want the property corners known before posts go in, and we keep drainage and utility easements open. The finished side, the color, and the mower-gate width are settled up front so nothing is guessed. HOA rules and the city's height limits apply where the lot falls under them. Call (910) 519-2447 or use the quote form for a free Piney Green estimate.",
+    "fence-company-midway-park-nc.html": "Jacksonville NC Fence Company fences private off-base houses in Midway Park along the corridor toward Camp Lejeune. The work is practical: pet containment, a privacy line on a modest yard, and repairs after a storm. We do not install inside the base gate. Many houses here are rentals, so we need the owner's written approval before posts are set. Chain link, wood privacy, and vinyl are the materials that fit smaller yards. Call (910) 519-2447 or send the quote form for a free Midway Park estimate.",
+    "fence-company-onslow-county-nc.html": "Jacksonville NC Fence Company serves Onslow County communities within about 25 miles of Jacksonville, where fence rules change between the city, other towns, and unincorporated land. Inside Jacksonville, residential front-yard fences are limited to 4 feet and side or rear fences to 6 feet. In unincorporated county, a zoning permit is not required for a fence, and easements and the right-of-way stay clear. Sand, humidity, and storms are the constants, so posts go in concrete across every town. HOA rules can be tighter than either the city or the county, and we build to the rule that applies to your parcel. Call (910) 519-2447 or use the quote form for a free Onslow County estimate.",
+}
+
+
+def _check_intros():
+    import re
+    for fn, text in INTROS.items():
+        sentences = [s for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s]
+        assert text.startswith(NAME), fn
+        assert 5 <= len(sentences) <= 6, (fn, len(sentences))
+
+
+_check_intros()
+
 PHONE_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'
 MENU_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>'
 
@@ -59,8 +95,8 @@ def canonical(path):
 
 
 def quote_btn(current):
-    href = "#quote" if current == "index.html" else "contact.html#quote"
-    return f'<a class="btn btn-primary" href="{href}">Get a free quote</a>'
+    # Every page carries the quote form in its header, so the button always jumps to it.
+    return '<a class="btn btn-primary" href="#quote">Get a free quote</a>'
 
 
 def call_btn(cls="btn btn-ghost"):
@@ -91,6 +127,45 @@ def faq_cards(items):
     return '<div class="faq-grid">' + "".join(blocks) + "</div>"
 
 
+def faq_accordion(items):
+    blocks = []
+    for q, a in items:
+        blocks.append(f'<details class="faq-acc"><summary>{q}</summary><p>{a}</p></details>')
+    return '<div class="faq-acc-list">' + "".join(blocks) + "</div>"
+
+
+def page_hero(filename, h1, crumb_html="", eyebrow="", cls=""):
+    """Slim interior header: crumbs, H1, 5-6 sentence intro, call button, and the quote form."""
+    eb = f'<p class="eyebrow">{eyebrow}</p>' if eyebrow else ""
+    return f'''<section class="page-hero {cls}">
+  <div class="container page-hero-grid">
+    <div class="page-hero-copy">
+      {crumb_html}{eb}
+      <h1>{h1}</h1>
+      <p class="lede">{INTROS[filename]}</p>
+      <div class="hero-actions">{call_btn("btn btn-primary btn-lg")}</div>
+    </div>
+    {tally_block()}
+  </div>
+</section>'''
+
+
+def cta_band(heading, text=None):
+    text = text or f"Call {PHONE} or send the lot details. Estimates are free."
+    return f'''<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h2>{heading}</h2>
+      <p>{text}</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-primary btn-lg" href="#quote">Request a free quote</a>
+      {call_btn("btn btn-ink btn-lg")}
+    </div>
+  </div>
+</section>'''
+
+
 def header(current):
     def link(href, label):
         cur = ' aria-current="page"' if href == current else ""
@@ -100,7 +175,7 @@ def header(current):
     loc_links = link("service-areas.html", "All service areas") + "".join(
         link(h, l) for h, l in LOCATIONS
     )
-    quote_href = "#quote" if current == "index.html" else "contact.html#quote"
+    quote_href = "#quote"
     return f'''<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="topbar">
@@ -150,7 +225,7 @@ def footer():
   <div class="container footer-grid">
     <div>
       <h2>Company</h2>
-      <img src="logo.svg" alt="" width="280" height="60">
+      <a class="footer-logo" href="index.html" aria-label="{NAME} home"><img src="logo.svg" alt="{NAME}" width="280" height="60"></a>
       <p style="margin-top:0.9rem">Fence installation and repair for homes, farms, and commercial lots in Jacksonville, NC and nearby Onslow County.</p>
       <a class="footer-phone" href="tel:{TEL}">{PHONE}</a>
       <ul style="margin-top:0.8rem">
@@ -185,7 +260,7 @@ def footer():
 </footer>
 <nav class="callbar" aria-label="Call or request a quote">
   <a class="btn btn-ink" href="tel:{TEL}">{PHONE_SVG}Call</a>
-  <a class="btn btn-primary" href="contact.html#quote">Free quote</a>
+  <a class="btn btn-primary" href="#quote">Free quote</a>
 </nav>'''
 
 
@@ -195,6 +270,7 @@ TALLY_SCRIPT = '''<script>var d=document,w="https://tally.so/widgets/embed.js",v
 def layout(filename, title, description, body, graph, og_image="/images/wood-privacy.jpg"):
     url = canonical(filename)
     schema = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
+    title = title.replace("&", "&amp;")
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -350,15 +426,27 @@ def faq_schema(filename, items):
 HOME_FAQS = [
     (
         "How much does a fence cost in Jacksonville, NC?",
-        "The price follows the line we measure: length, height, material, gates, and whether an old fence has to come out. Sandy soil, a slope, tree roots, and a long carry from the street change the labor. We do not publish a per-foot menu. The estimate comes from the property.",
+        "The price follows the line we measure: length, height, material, gates, and whether an old fence has to come out. Sandy soil, a slope, tree roots, and a long carry from the street change the labor. We do not publish a per-foot menu. The estimate comes from the property, and it is free.",
     ),
     (
-        "Can you install a fence in the sandy soil around Onslow County?",
-        "Yes. Most lots from Jacksonville out toward the river sit on coastal-plain sand, and some low yards hold water after a hard rain. Posts go in concrete, deep enough to stay put, with the mix crowned so water does not pool at the post. If a stretch stays soft or saturated, we say so before we set it.",
+        "How does the estimate work?",
+        "Send the quote form or call with the town, the fence type if you know it, and about how much line you need. We look at the property, talk through the job, and give you a number for that line. Photos and any written HOA rule help us get it right the first time.",
     ),
     (
         "Do you offer wood, vinyl, chain link, aluminum, and farm fencing?",
         "Yes. Wood and vinyl cover privacy and picket work. Chain link covers yards, dogs, and commercial perimeters. Aluminum covers open ornamental lines and pools. Farm fencing covers rail, wire, pipe-and-cable, and electric for animals on larger parcels. Repair work is part of the same call.",
+    ),
+    (
+        "How long does a fence installation take?",
+        "It depends on the length, the material, gate count, and the weather. A short backyard line is a smaller job than a long acreage run. Material lead time and any HOA approval can also move the start date. We give you a realistic schedule with the estimate instead of promising a fixed number of days.",
+    ),
+    (
+        "How much maintenance does each fence need?",
+        "Wood needs a stain or sealer on a regular schedule to hold up in coastal humidity. Vinyl needs an occasional wash. Aluminum needs very little because it does not rust or need paint. Chain link needs little beyond checking gates and ties, and vinyl-coated fabric holds up better near salt air.",
+    ),
+    (
+        "Can you install a fence in the sandy soil around Onslow County?",
+        "Yes. Most lots from Jacksonville out toward the river sit on coastal-plain sand, and some low yards hold water after a hard rain. Posts go in concrete, deep enough to stay put, with the mix crowned so water does not pool at the post. If a stretch stays soft or saturated, we say so before we set it.",
     ),
     (
         "Do I need a permit to put up a fence in Jacksonville or Onslow County?",
@@ -395,118 +483,125 @@ def home():
         ("images/farm-rail.jpg", "Split-rail fence in a grassy field"),
     ]
     ghtml = "".join(
-        f'<figure><img src="{src}" alt="{alt}" loading="lazy"></figure>' for src, alt in gallery
+        f'<figure><img src="{src}" alt="{alt}" width="925" height="615" loading="lazy"></figure>' for src, alt in gallery
     )
-    chips = "".join(f'<li><a href="{h}">{n}</a></li>' for h, n in LOCATIONS)
+    why = [
+        ("Built for local ground", "Coastal-plain sand, soft low spots, and salt air near the water change how posts are set and which material lasts. We plan for the lot in front of us."),
+        ("Plain communication", "You hear whether a job is a repair or a rebuild, what drives the number, and what we need from you. No jargon, and no guessing at rules."),
+        ("The right material for the job", "A privacy yard, a pool barrier, a dog run, and a pasture line are different fences. We match the material to how you will use it."),
+        ("Careful workmanship", "Posts set in concrete, gates hung so they latch without dragging, and lines checked before we leave."),
+    ]
+    why_html = "".join(f'<article class="factor"><h3>{t}</h3><p>{p}</p></article>' for t, p in why)
+    process = [
+        ("Request a quote.", "Send the quote form or call with the town, the fence type, and about how much line you need."),
+        ("Discuss the project.", "We talk through the job and walk the property to check the ground, gates, slope, and any HOA or city rule."),
+        ("Receive your estimate.", "You get a free estimate for that line, including what could change it."),
+        ("Schedule installation.", "Once you approve, we set a start date, build the fence, and walk the finished line with you."),
+    ]
+    process_html = "".join(
+        f'<li><span class="num">{i}</span><span><strong>{t}</strong> {p}</span></li>' for i, (t, p) in enumerate(process, start=1)
+    )
+    chips = f'<li><a href="service-areas.html">Jacksonville</a></li>' + "".join(f'<li><a href="{h}">{n}</a></li>' for h, n in LOCATIONS)
     desc = "Jacksonville NC Fence Company installs and repairs wood, vinyl, chain-link, aluminum, and farm fencing in Jacksonville and Onslow County. Call (910) 519-2447."
+    home_title = "Fence Company Jacksonville NC | Vinyl Fence, Wood Fence, Aluminum Fence & More"
     body = f'''<section class="hero">
   <div class="hero-media"><img src="images/wood-privacy.jpg" alt="Wood privacy fence with vertical boards and square posts" width="926" height="615" fetchpriority="high"></div>
   <div class="hero-shade"></div>
   <div class="container hero-grid">
     <div>
-      <p class="eyebrow">Jacksonville, North Carolina</p>
-      <h1>Fence company in Jacksonville, NC</h1>
-      <p class="lede">Wood, vinyl, chain-link, aluminum, and farm fencing for houses and commercial lots. New lines, replacements, repairs, and gates are quoted from the property.</p>
+      <h1>Fence Company Jacksonville NC</h1>
+      <p class="lede">{INTROS["index.html"]}</p>
       <div class="hero-actions">
         {call_btn("btn btn-primary btn-lg")}
-        <a class="btn btn-ghost btn-lg" href="contact.html#quote">Request an estimate</a>
       </div>
-      <ul class="hero-points">
-        <li>Homes, farms, and commercial lots</li>
-        <li>Posts set for coastal-plain sand</li>
-        <li>Free on-site estimates</li>
-      </ul>
     </div>
     {tally_block()}
   </div>
 </section>
-<section class="section">
+<section class="section bg-paper" id="why-choose-us">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Why choose us</p>
+      <h2>Why Choose Jacksonville NC Fence Company</h2>
+      <p>A fence is a long-term purchase on your property. These are the habits we bring to every Jacksonville and Onslow County job.</p>
+    </div>
+    <div class="factor-grid why-grid">{why_html}</div>
+  </div>
+</section>
+<section class="section bg-sand" id="services">
   <div class="container">
     <div class="section-head">
       <p class="kicker">Materials and work</p>
-      <h2>Fence services in Jacksonville</h2>
+      <h2>Our Fence Services</h2>
       <p>Start with the job. A backyard screen, a pool barrier, a dog run, and a pasture line are not the same fence.</p>
     </div>
     <div class="card-grid services">{"".join(card_html)}</div>
   </div>
 </section>
-<section class="band">
-  <div class="container section">
+<section class="section band" id="gallery">
+  <div class="container">
     <div class="section-head">
-      <p class="kicker">Styles</p>
-      <h2>Fences we install</h2>
-      <p>Privacy, vinyl, chain link, aluminum, and rail from the crew that walks the line in Jacksonville and Onslow County.</p>
+      <p class="kicker">Gallery</p>
+      <h2>Our Gallery</h2>
+      <p>Fence styles we install in Jacksonville and Onslow County. These photos illustrate each style and are not a record of completed customer projects.</p>
     </div>
     <div class="gallery">{ghtml}</div>
   </div>
 </section>
-<section class="section soft">
-  <div class="container split-2">
-    <div>
-      <h2>Houses</h2>
-      <p>Backyard privacy, pet runs, pool barriers, and property-line replacements. Most in-town jobs are a 6-foot wood or vinyl line on the side and rear, with a gate that fits the mower. Front yards inside the city stay at the 4-foot limit.</p>
-      <a class="more" href="wood-fence.html">Wood fencing</a>
+<section class="section bg-paper" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Reviews</p>
+      <h2>Customer Reviews</h2>
     </div>
-    <div>
-      <h2>Lots and acreage</h2>
-      <p>A storage yard needs heavier chain link and a vehicle gate. A pasture in Richlands or Hubert needs wire or rail sized for the animals, not a backyard panel. Tell us how the ground is used and we will spec the line for that use.</p>
-      <a class="more" href="commercial-fencing.html">Commercial fencing</a>
+    <div class="reviews-empty">
+      <p>We have not posted customer reviews on this site yet, and we will not invent any. When verified reviews from real customers are available, they will appear here with the reviewer&rsquo;s own words.</p>
+      <p>Want to talk to us first? Call <a href="tel:{TEL}">{PHONE}</a> or send the quote form and ask any question about your fence.</p>
     </div>
   </div>
 </section>
-<section class="section">
+<section class="section bg-sand" id="process">
   <div class="container split-2">
     <div>
-      <h2>How a fence job is quoted</h2>
-      <ol class="steps">
-        <li><span class="num">1</span><span><strong>Name the job.</strong> Screen, contain animals, mark a line, or secure a lot. That choice picks the material faster than a photo.</span></li>
-        <li><span class="num">2</span><span><strong>Walk the ground.</strong> Sand, standing water, slope, trees, and the distance from the driveway all change the posts and the labor.</span></li>
-        <li><span class="num">3</span><span><strong>Count the openings.</strong> A fence with the wrong gate is a daily problem. Walk gates and drive gates are priced as their own pieces.</span></li>
-        <li><span class="num">4</span><span><strong>Repair or replace.</strong> Sound posts can take new panels. Posts that have failed in the sand cannot. We say which one you have.</span></li>
-      </ol>
+      <p class="kicker">How it works</p>
+      <h2>Our Process</h2>
+      <ol class="steps">{process_html}</ol>
     </div>
     <div class="panel">
       <h2>Repairs and gates</h2>
       <p>Leaning posts, missing boards, and sagging gates are a large share of the calls after a storm. If the rest of the line is sound, we repair the failed section. If the posts have let go, we will tell you to rebuild that run.</p>
       <p>Gates are hung on posts sized for the opening, with hardware that can carry the weight. A walk gate and a drive gate are different builds.</p>
-      <a class="more" href="contact.html#quote">Request an estimate</a>
+      <a class="more" href="#quote">Request an estimate</a>
     </div>
   </div>
 </section>
-<section class="band">
-  <div class="container section">
-    <h2>Service area</h2>
+<section class="section band-pine" id="areas">
+  <div class="container">
+    <h2>Areas We Serve</h2>
     <p>We work in Jacksonville and nearby communities, roughly a 25-mile drive. Each town puts a different demand on the fence: salt air near the water, HOA rules in subdivisions, and longer farm lines inland.</p>
     <ul class="chips">{chips}</ul>
-    <p style="margin-top:1rem"><a href="service-areas.html" style="color:white">All service areas</a></p>
+    <p style="margin-top:1rem"><a href="service-areas.html" class="band-link">See all service areas</a></p>
   </div>
 </section>
-<section class="section">
-  <div class="container">
-    <h2>Questions before you call</h2>
-    <div style="margin-top:1.2rem">{faq_cards(HOME_FAQS)}</div>
-    <p style="margin-top:1rem"><a href="faq.html">More fence questions</a></p>
+<section class="section bg-paper" id="faq">
+  <div class="container faq-wrap">
+    <div class="section-head">
+      <p class="kicker">FAQ</p>
+      <h2>Frequently Asked Questions</h2>
+      <p>Straight answers on estimates, materials, timelines, and upkeep.</p>
+      <p><a href="faq.html">More fence questions</a></p>
+    </div>
+    {faq_accordion(HOME_FAQS)}
   </div>
 </section>
-<section class="cta-band">
-  <div class="container cta-inner">
-    <div>
-      <h2>Ready to walk the line?</h2>
-      <p>Call {PHONE} or send the lot details. Estimates are free.</p>
-    </div>
-    <div class="cta-actions">
-      <a class="btn btn-primary btn-lg" href="#quote">Get a free quote</a>
-      {call_btn("btn btn-ink btn-lg")}
-    </div>
-  </div>
-</section>'''
+{cta_band("Request a Free Quote", f"Call {PHONE} or send the lot details through the quote form. Estimates are free.")}'''
     graph = [
         business_node(),
         website_node(),
-        webpage("index.html", "Fence company in Jacksonville, NC", desc, SITE + "/#business"),
+        webpage("index.html", "Fence Company Jacksonville NC", desc, SITE + "/#business"),
         faq_schema("index.html", HOME_FAQS),
     ]
-    layout("index.html", "Fence Company in Jacksonville, NC | Jacksonville NC Fence Company", desc, body, graph)
+    layout("index.html", home_title, desc, body, graph)
 
 
 def steps(items):
@@ -563,19 +658,7 @@ def service_layout(s):
     faqs = s["faqs"]
     towns = "".join(f'<li><a href="{h}">{n}</a></li>' for h, n in LOCATIONS)
     body = f'''<div class="crumb-bar"><div class="container">{crumbs([("services.html", "Services"), (filename, s["crumb"])])}</div></div>
-<section class="page-hero service-hero">
-  <div class="container">
-    <div class="service-hero-inner">
-      <p class="eyebrow">{s["crumb"]}</p>
-      <h1>{s["h1"]}</h1>
-      <p class="lede">{s["intro"]}</p>
-      <div class="hero-actions">
-        {call_btn("btn btn-primary btn-lg")}
-        <a class="btn btn-ghost btn-lg" href="contact.html#quote">Get a free quote</a>
-      </div>
-    </div>
-  </div>
-</section>
+{page_hero(filename, s["h1"], eyebrow=s["crumb"], cls="service-hero")}
 <section class="section service-body">
   <div class="container service-layout">
     <div class="service-main">
@@ -599,7 +682,7 @@ def service_layout(s):
         <p>Call or send the town, the approximate length, and the gate count. We will tell you if the job is a repair, a replacement, or a different material than you started with.</p>
         <p class="side-phone">{phone_link("phone-link-lg")}</p>
         <p class="side-hours">{OFFICE_HOURS}</p>
-        <p><a class="btn btn-primary" href="contact.html#quote">Get a free quote</a></p>
+        <p><a class="btn btn-primary" href="#quote">Get a free quote</a></p>
       </div>
       <div class="side-card side-card-muted">
         <p class="side-kicker">Related</p>
@@ -608,11 +691,11 @@ def service_layout(s):
     </aside>
   </div>
 </section>
-<section class="section section-towns">
+<section class="section section-towns bg-sand">
   <div class="container">
     <h2>Towns we serve</h2>
     <ul class="chips light-chips">{towns}</ul>
-    <p class="towns-links"><a href="service-areas.html">Service areas</a> · <a href="contact.html#quote">Request an estimate</a> · <a href="services.html">All services</a></p>
+    <p class="towns-links"><a href="service-areas.html">Service areas</a> · <a href="#quote">Request an estimate</a> · <a href="services.html">All services</a></p>
   </div>
 </section>'''
     graph = [
@@ -875,19 +958,13 @@ def services_page():
         <span class="body"><h3>{label}</h3><p>{BLURBS[href]}</p><span class="more">View service</span></span>
       </a>''')
     desc = "Wood, vinyl, chain-link, aluminum, farm, and commercial fence installation in Jacksonville, NC. Compare services and call (910) 519-2447."
-    body = f'''<section class="page-hero">
-  <div class="container">
-    {crumbs([("services.html", "Services")])}
-    <h1>Fence services in Jacksonville, NC</h1>
-    <p class="lede">Six ways to fence a property in Onslow County. Pick the material that matches the job, then open the page for process, cost factors, and the questions owners actually ask.</p>
-    <div class="hero-actions">{call_btn("btn btn-primary btn-lg")} <a class="btn btn-ghost btn-lg" href="contact.html#quote">Get a free quote</a></div>
-  </div>
-</section>
-<section class="section">
+    body = f'''{page_hero("services.html", "Fence services in Jacksonville, NC", crumb_html=crumbs([("services.html", "Services")]))}
+<section class="section bg-paper">
   <div class="container">
     <div class="card-grid services">{"".join(cards)}</div>
   </div>
-</section>'''
+</section>
+{cta_band("Not sure which fence fits?", f"Call {PHONE} or send the lot details. We will tell you which material suits the job.")}'''
     graph = [business_node(), webpage("services.html", "Fence services in Jacksonville, NC", desc, SITE + "/#business"), crumbs_schema("services.html", [("services.html", "Services")])]
     layout("services.html", "Fence Services in Jacksonville, NC | Jacksonville NC Fence Company", desc, body, graph)
 
@@ -918,37 +995,21 @@ FAQ_PAGE = HOME_FAQS + [
 
 def faq_page():
     desc = "Fence cost, permits, sandy soil, HOA rules, and storm repairs in Jacksonville, NC. Answers from Jacksonville NC Fence Company. Call (910) 519-2447."
-    body = f'''<section class="page-hero">
-  <div class="container">
-    {crumbs([("faq.html", "FAQ")])}
-    <h1>Fence questions in Jacksonville, NC</h1>
-    <p class="lede">Straight answers on price, permits, soil, and repairs. If your lot does not fit these, call {PHONE} and describe the line.</p>
+    body = f'''{page_hero("faq.html", "Fence questions in Jacksonville, NC", crumb_html=crumbs([("faq.html", "FAQ")]))}
+<section class="section bg-paper">
+  <div class="container faq-page-wrap">
+    {faq_accordion(FAQ_PAGE)}
   </div>
 </section>
-<section class="section">
-  <div class="container">
-    {faq_cards(FAQ_PAGE)}
-    <div class="cta-actions" style="margin-top:1.5rem">
-      <a class="btn btn-primary" href="contact.html#quote">Get a free quote</a>
-      {call_btn("btn btn-ink")}
-    </div>
-  </div>
-</section>'''
+{cta_band("Request a Free Quote", f"Call {PHONE} or send the lot details. Estimates are free.")}'''
     graph = [business_node(), webpage("faq.html", "Fence questions in Jacksonville, NC", desc, canonical("faq.html") + "#faq"), faq_schema("faq.html", FAQ_PAGE), crumbs_schema("faq.html", [("faq.html", "FAQ")])]
     layout("faq.html", "Fence FAQ | Jacksonville NC Fence Company", desc, body, graph)
 
 
 def about_page():
     desc = "Jacksonville NC Fence Company installs and repairs wood, vinyl, chain-link, aluminum, and farm fences in Jacksonville and Onslow County. Call (910) 519-2447."
-    body = f'''<section class="page-hero">
-  <div class="container">
-    {crumbs([("about.html", "About")])}
-    <h1>About Jacksonville NC Fence Company</h1>
-    <p class="lede">A local fence crew for houses, farms, and commercial lots in Jacksonville and nearby Onslow County. Our installers do the work. The estimate comes from a look at the line, not from a national form.</p>
-    <div class="hero-actions">{call_btn("btn btn-primary btn-lg")} <a class="btn btn-ghost btn-lg" href="contact.html#quote">Get a free quote</a></div>
-  </div>
-</section>
-<section class="section">
+    body = f'''{page_hero("about.html", "About Jacksonville NC Fence Company", crumb_html=crumbs([("about.html", "About")]))}
+<section class="section bg-paper">
   <div class="container split">
     <div class="split-media"><img src="images/vinyl-picket.jpg" alt="Black vinyl picket fence along a garden" width="925" height="615"></div>
     <div class="prose">
@@ -958,7 +1019,7 @@ def about_page():
     </div>
   </div>
 </section>
-<section class="section soft">
+<section class="section bg-sand">
   <div class="container prose">
     <h2>How we work a Jacksonville lot</h2>
     <p>Coastal-plain sand, summer storms, and salt air closer to the water are the conditions that decide the posts and the coating. Inside the city, front-yard fences stop at 4 feet and side or rear residential fences stop at 6 feet. In unincorporated Onslow County, a zoning permit is not required for a fence, and the fence still has to stay off easements. HOA rules can be tighter than both.</p>
@@ -972,15 +1033,8 @@ def about_page():
 
 def contact_page():
     desc = "Request a free fence estimate in Jacksonville, NC. Call (910) 519-2447 or send the town, fence type, and approximate length."
-    body = f'''<section class="page-hero">
-  <div class="container">
-    {crumbs([("contact.html", "Contact")])}
-    <h1>Request a fence estimate</h1>
-    <p class="lede">Call {PHONE} or use the form. Estimates are free. We are a service-area company in Jacksonville, with no public storefront to visit.</p>
-    <div class="hero-actions">{call_btn("btn btn-primary btn-lg")}</div>
-  </div>
-</section>
-<section class="section">
+    body = f'''{page_hero("contact.html", "Request a fence estimate", crumb_html=crumbs([("contact.html", "Contact")]))}
+<section class="section bg-paper">
   <div class="container contact-layout">
     <div class="prose">
       <h2>What to include</h2>
@@ -991,7 +1045,12 @@ def contact_page():
         <p class="map-caption">Service area centered on Jacksonville, NC. This pin marks the city, not a storefront.</p>
       </div>
     </div>
-    {tally_block()}
+    <div class="prose">
+      <h2>Call or request a quote</h2>
+      <p>The quote form is at the top of this page. If you would rather talk it through, call {PHONE} and describe the line.</p>
+      <p>Hours: {OFFICE_HOURS}.</p>
+      <p>{call_btn("btn btn-primary btn-lg")}</p>
+    </div>
   </div>
 </section>'''
     graph = [business_node(), webpage("contact.html", "Request a fence estimate", desc, SITE + "/#business"), crumbs_schema("contact.html", [("contact.html", "Contact")])]
@@ -1165,47 +1224,29 @@ def location_pages():
         others = "".join(
             f'<li><a href="{h}">{n}</a></li>' for h, n in LOCATIONS if h != filename
         )
-        body = f'''<section class="page-hero">
-  <div class="container">
-    {crumbs([("service-areas.html", "Service areas"), (filename, loc["name"])])}
-    <h1>Fence company in {loc["name"]}, NC</h1>
-    <p class="lede">{loc["intro"]}</p>
-    <div class="hero-actions">{call_btn("btn btn-primary btn-lg")} <a class="btn btn-ghost btn-lg" href="contact.html#quote">Get a free quote</a></div>
-  </div>
-</section>
-<section class="section">
+        body = f'''{page_hero(filename, f"Fence company in {loc['name']}, NC", crumb_html=crumbs([("service-areas.html", "Service areas"), (filename, loc["name"])]))}
+<section class="section bg-paper">
   <div class="container prose">
     <h2>What fence work looks like here</h2>
     <p>{loc["detail"]}</p>
     <div style="margin-top:1.2rem">{factors(loc["points"])}</div>
   </div>
 </section>
-<section class="section soft">
+<section class="section bg-sand">
   <div class="container">
     <h2>Services that fit {loc["name"]}</h2>
     <ul class="chips light-chips" style="margin-top:1rem">{svc}</ul>
     <div style="margin-top:1.6rem">{faq_cards(loc["faqs"])}</div>
   </div>
 </section>
-<section class="section">
+<section class="section bg-paper">
   <div class="container">
     <h2>Nearby areas</h2>
     <ul class="chips light-chips">{others}</ul>
     <p style="margin-top:1rem"><a href="service-areas.html">Full service area</a></p>
   </div>
 </section>
-<section class="cta-band">
-  <div class="container cta-inner">
-    <div>
-      <h2>Estimate for a {loc["name"]} fence</h2>
-      <p>Call {PHONE} or send the lot details. Say you are in {loc["name"]} so we plan the drive.</p>
-    </div>
-    <div class="cta-actions">
-      <a class="btn btn-primary btn-lg" href="contact.html#quote">Get a free quote</a>
-      {call_btn("btn btn-ink btn-lg")}
-    </div>
-  </div>
-</section>'''
+{cta_band(f"Estimate for a {loc['name']} fence", f"Call {PHONE} or send the lot details. Say you are in {loc['name']} so we plan the drive.")}'''
         graph = [
             business_node(),
             webpage(filename, f"Fence company in {loc['name']}, NC", desc, canonical(filename) + "#place"),
@@ -1228,15 +1269,8 @@ def service_areas_page():
         cards.append(f'''<a class="service-card" href="{loc["file"]}">
         <span class="body"><h3>{loc["name"]}</h3><p>{loc["intro"]}</p><span class="more">Fence notes for {loc["name"]}</span></span>
       </a>''')
-    body = f'''<section class="page-hero">
-  <div class="container">
-    {crumbs([("service-areas.html", "Service areas")])}
-    <h1>Fence service area around Jacksonville, NC</h1>
-    <p class="lede">We install and repair fences within about 25 miles of Jacksonville. The towns below are not copies of each other. Salt, lot size, farm lines, and city rules change the fence.</p>
-    <div class="hero-actions">{call_btn("btn btn-primary btn-lg")}</div>
-  </div>
-</section>
-<section class="section">
+    body = f'''{page_hero("service-areas.html", "Fence service area around Jacksonville, NC", crumb_html=crumbs([("service-areas.html", "Service areas")]))}
+<section class="section bg-paper">
   <div class="container">
     <div class="card-grid services">{"".join(cards)}</div>
     <div class="map-frame">
@@ -1251,14 +1285,8 @@ def service_areas_page():
 
 def privacy_page():
     desc = "How Jacksonville NC Fence Company uses the information you send with a fence estimate request."
-    body = f'''<section class="page-hero">
-  <div class="container">
-    {crumbs([("privacy.html", "Privacy")])}
-    <h1>Privacy</h1>
-    <p class="lede">What we do with the details you send when you ask for a fence estimate.</p>
-  </div>
-</section>
-<section class="section">
+    body = f'''{page_hero("privacy.html", "Privacy", crumb_html=crumbs([("privacy.html", "Privacy")]))}
+<section class="section bg-paper">
   <div class="container prose">
     <p>The quote form on this site is provided by Tally. When you submit it, we receive your name, phone number, email, and whatever you wrote about the job, along with a source field that tells us the lead came from {NAME}.</p>
     <p>We use that information to reply about a fence estimate and to schedule a look at the property. We do not sell the form contents. Phone calls to {PHONE} are answered for the same purpose.</p>
