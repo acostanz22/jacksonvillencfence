@@ -1,9 +1,63 @@
 # -*- coding: utf-8 -*-
 """Generate the Jacksonville NC Fence Company static site."""
 import json
+import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+
+
+def image_size(rel):
+    """Real pixel size of an image file (PNG or JPEG) so width/height attributes match."""
+    data = (ROOT / rel).read_bytes()
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        return struct.unpack(">II", data[16:24])
+    i = 2
+    while i < len(data) - 9:
+        if data[i] != 0xFF:
+            i += 1
+            continue
+        marker = data[i + 1]
+        if marker in (0xC0, 0xC1, 0xC2):
+            h, w = struct.unpack(">HH", data[i + 5:i + 9])
+            return w, h
+        i += 2 + struct.unpack(">H", data[i + 2:i + 4])[0]
+    raise ValueError(rel)
+
+
+def img_tag(src, alt, loading="lazy", extra=""):
+    w, h = image_size(src)
+    load = f' loading="{loading}" decoding="async"' if loading else ""
+    return f'<img src="{src}" alt="{alt}" width="{w}" height="{h}"{load}{extra}>'
+
+
+# Two matching photos per service type (same material in both).
+SERVICE_PHOTOS = {
+    "wood-fence.html": [
+        ("images/wood-privacy.jpg", "Wood privacy fence with vertical boards, rails, and square posts"),
+        ("images/wood-2.jpg", "Stained wood fence with a flat top along a lawn in front of a brick house"),
+    ],
+    "vinyl-fence.html": [
+        ("images/vinyl-privacy.jpg", "White vinyl fence with decorative tops along a lawn"),
+        ("images/vinyl-2.jpg", "White vinyl fence turning a corner around a backyard"),
+    ],
+    "chain-link-fence.html": [
+        ("images/chain-link.jpg", "Galvanized chain-link fence with metal line posts"),
+        ("images/chain-link-run.jpg", "Long run of galvanized chain-link fence along a paved walk"),
+    ],
+    "aluminum-fence.html": [
+        ("images/aluminum-1.jpg", "Black ornamental aluminum fence with vertical pickets behind a hedge"),
+        ("images/aluminum-2.jpg", "Black aluminum picket fence along a tree-shaded lawn"),
+    ],
+    "farm-fence.html": [
+        ("images/farm-rail.jpg", "Split-rail fence running through a grassy field"),
+        ("images/farm-2.jpg", "White rail fence in front of red barns on open pasture"),
+    ],
+    "commercial-fencing.html": [
+        ("images/commercial-1.jpg", "Tall commercial perimeter fence topped with barbed wire"),
+        ("images/commercial-2.jpg", "Close view of heavy commercial chain-link fabric"),
+    ],
+}
 SITE = "https://www.jacksonvillencfence.com"
 NAME = "Jacksonville NC Fence Company"
 PHONE = "(910) 519-2447"
@@ -160,7 +214,7 @@ def cta_band(heading, text=None):
     </div>
     <div class="cta-actions">
       <a class="btn btn-primary btn-lg" href="#quote">Request a free quote</a>
-      {call_btn("btn btn-ink btn-lg")}
+      {call_btn("btn btn-outline-light btn-lg")}
     </div>
   </div>
 </section>'''
@@ -470,21 +524,11 @@ def home():
     ]
     card_html = []
     for href, img, alt, title, text in cards:
+        img, alt = SERVICE_PHOTOS[href][0]
         card_html.append(f'''<a class="service-card" href="{href}">
-        <span class="media"><img src="{img}" alt="{alt}" width="925" height="615" loading="lazy"></span>
+        <span class="media">{img_tag(img, alt)}</span>
         <span class="body"><h3>{title}</h3><p>{text}</p><span class="more">View service</span></span>
       </a>''')
-    gallery = [
-        ("images/wood-privacy.jpg", "Wood privacy fence with vertical boards"),
-        ("images/vinyl-privacy.jpg", "White vinyl fence along a lawn"),
-        ("images/vinyl-picket.jpg", "Black vinyl picket fence in front of a garden"),
-        ("images/chain-link.jpg", "Chain-link fence with metal posts"),
-        ("images/aluminum.jpg", "Black aluminum fence with vertical pickets"),
-        ("images/farm-rail.jpg", "Split-rail fence in a grassy field"),
-    ]
-    ghtml = "".join(
-        f'<figure><img src="{src}" alt="{alt}" width="925" height="615" loading="lazy"></figure>' for src, alt in gallery
-    )
     why = [
         ("Built for local ground", "Coastal-plain sand, soft low spots, and salt air near the water change how posts are set and which material lasts. We plan for the lot in front of us."),
         ("Plain communication", "You hear whether a job is a repair or a rebuild, what drives the number, and what we need from you. No jargon, and no guessing at rules."),
@@ -499,13 +543,13 @@ def home():
         ("Schedule installation.", "Once you approve, we set a start date, build the fence, and walk the finished line with you."),
     ]
     process_html = "".join(
-        f'<li><span class="num">{i}</span><span><strong>{t}</strong> {p}</span></li>' for i, (t, p) in enumerate(process, start=1)
+        f'<li><span class="num">{i}</span><h3>{t.rstrip(".")}</h3><p>{p}</p></li>' for i, (t, p) in enumerate(process, start=1)
     )
     chips = f'<li><a href="service-areas.html">Jacksonville</a></li>' + "".join(f'<li><a href="{h}">{n}</a></li>' for h, n in LOCATIONS)
     desc = "Jacksonville NC Fence Company installs and repairs wood, vinyl, chain-link, aluminum, and farm fencing in Jacksonville and Onslow County. Call (910) 519-2447."
     home_title = "Fence Company Jacksonville NC | Vinyl Fence, Wood Fence, Aluminum Fence & More"
     body = f'''<section class="hero">
-  <div class="hero-media"><img src="images/wood-privacy.jpg" alt="Wood privacy fence with vertical boards and square posts" width="926" height="615" fetchpriority="high"></div>
+  <div class="hero-media">{img_tag("images/hero.jpg", "White rail fence in front of red barns on open pasture under a blue sky", loading=None, extra=' fetchpriority="high"')}</div>
   <div class="hero-shade"></div>
   <div class="container hero-grid">
     <div>
@@ -518,7 +562,7 @@ def home():
     {tally_block()}
   </div>
 </section>
-<section class="section bg-paper" id="why-choose-us">
+<section class="section bg-sand" id="why-choose-us">
   <div class="container">
     <div class="section-head">
       <p class="kicker">Why choose us</p>
@@ -528,7 +572,7 @@ def home():
     <div class="factor-grid why-grid">{why_html}</div>
   </div>
 </section>
-<section class="section bg-sand" id="services">
+<section class="section bg-white" id="services">
   <div class="container">
     <div class="section-head">
       <p class="kicker">Materials and work</p>
@@ -538,52 +582,25 @@ def home():
     <div class="card-grid services">{"".join(card_html)}</div>
   </div>
 </section>
-<section class="section band" id="gallery">
+<section class="section bg-sage" id="process">
   <div class="container">
     <div class="section-head">
-      <p class="kicker">Gallery</p>
-      <h2>Our Gallery</h2>
-      <p>Fence styles we install in Jacksonville and Onslow County. These photos illustrate each style and are not a record of completed customer projects.</p>
-    </div>
-    <div class="gallery">{ghtml}</div>
-  </div>
-</section>
-<section class="section bg-paper" id="reviews">
-  <div class="container">
-    <div class="section-head">
-      <p class="kicker">Reviews</p>
-      <h2>Customer Reviews</h2>
-    </div>
-    <div class="reviews-empty">
-      <p>We have not posted customer reviews on this site yet, and we will not invent any. When verified reviews from real customers are available, they will appear here with the reviewer&rsquo;s own words.</p>
-      <p>Want to talk to us first? Call <a href="tel:{TEL}">{PHONE}</a> or send the quote form and ask any question about your fence.</p>
-    </div>
-  </div>
-</section>
-<section class="section bg-sand" id="process">
-  <div class="container split-2">
-    <div>
       <p class="kicker">How it works</p>
       <h2>Our Process</h2>
-      <ol class="steps">{process_html}</ol>
+      <p>Four clear steps from the first call to a finished fence line.</p>
     </div>
-    <div class="panel">
-      <h2>Repairs and gates</h2>
-      <p>Leaning posts, missing boards, and sagging gates are a large share of the calls after a storm. If the rest of the line is sound, we repair the failed section. If the posts have let go, we will tell you to rebuild that run.</p>
-      <p>Gates are hung on posts sized for the opening, with hardware that can carry the weight. A walk gate and a drive gate are different builds.</p>
-      <a class="more" href="#quote">Request an estimate</a>
-    </div>
+    <ol class="process-grid">{process_html}</ol>
   </div>
 </section>
-<section class="section band-pine" id="areas">
+<section class="section bg-mist" id="areas">
   <div class="container">
     <h2>Areas We Serve</h2>
-    <p>We work in Jacksonville and nearby communities, roughly a 25-mile drive. Each town puts a different demand on the fence: salt air near the water, HOA rules in subdivisions, and longer farm lines inland.</p>
-    <ul class="chips">{chips}</ul>
-    <p style="margin-top:1rem"><a href="service-areas.html" class="band-link">See all service areas</a></p>
+    <p class="area-note">We work in Jacksonville and nearby communities, roughly a 25-mile drive. Each town puts a different demand on the fence: salt air near the water, HOA rules in subdivisions, and longer farm lines inland.</p>
+    <ul class="chips light-chips">{chips}</ul>
+    <p class="towns-links"><a href="service-areas.html">See all service areas</a></p>
   </div>
 </section>
-<section class="section bg-paper" id="faq">
+<section class="section bg-sand" id="faq">
   <div class="container faq-wrap">
     <div class="section-head">
       <p class="kicker">FAQ</p>
@@ -624,18 +641,10 @@ def related(links):
 
 
 def service_gallery(s):
-    """Primary service image plus one other service image."""
-    order = [h for h, _ in s["related"]] + [o["file"] for o in SERVICES_DATA]
-    by_file = {o["file"]: o for o in SERVICES_DATA}
-    shots = [s]
-    for f in order:
-        o = by_file.get(f)
-        if o and o["file"] != s["file"] and o["image"] != s["image"]:
-            shots.append(o)
-            break
+    """Two photos of the same fence type (see SERVICE_PHOTOS)."""
     figs = "".join(
-        f'<figure class="service-shot"><img src="{o["image"]}" alt="{o["alt"]}" width="925" height="615" loading="lazy" decoding="async"></figure>'
-        for o in shots
+        f'<figure class="service-shot">{img_tag(src, alt)}</figure>'
+        for src, alt in SERVICE_PHOTOS[s["file"]]
     )
     return f'<div class="service-gallery">{figs}</div>'
 
@@ -937,6 +946,9 @@ SERVICES_DATA = [
     },
 ]
 
+
+for _s in SERVICES_DATA:
+    _s["image"], _s["alt"] = SERVICE_PHOTOS[_s["file"]][0]
 
 BLURBS = {
     "vinyl-fence.html": "Privacy, picket, and ranch-rail vinyl for a straight line without a yearly stain. A practical fit for humid Onslow County summers.",
